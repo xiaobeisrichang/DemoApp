@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Image
 } from 'react-native';
+import Timer from '../components/timer'
 
 export default class menuTab extends Component {
   constructor(props) {
@@ -75,6 +76,7 @@ class ChildrenItem extends Component {
           <View style = {styles.childrenTitleWrap}>
             <Text style={styles.childrenTitle}>{feed.text}</Text>
             <Text style={styles.childrenSmallTitle}>{feed.smallTitle}</Text>
+            {!feed.smallTitle  && <Timer startTime = "" endTime = "" formData = "Y|M|D H|M|S" dataShowType="0"></Timer>}
           </View>
           <Image style={styles.childrenImg} source={{
             uri: feed.img

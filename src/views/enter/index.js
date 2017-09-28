@@ -16,7 +16,7 @@ import ScrollComponent from '../index/scroll';
 import BookComponent from '../index/book';
 import MenuComponent from '../index/menuList';
 import MenuTabComponent from '../index/menuTab';
-import Timer from '../components/timer'
+
 
 export default class botao extends Component {
   render() {
@@ -27,7 +27,7 @@ export default class botao extends Component {
         <BookComponent></BookComponent>
         <MenuComponent></MenuComponent>
         <MenuTabComponent></MenuTabComponent>
-        <Timer startTime = "" endTime = "" formData = "Y|M|D H|M|S" dataShowType='0'></Timer>
+        
 
       </View>
       </ScrollView>
