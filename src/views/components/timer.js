@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, AppState,Image} from 'react-native'
+import {StyleSheet, Text, View, AppState, Image} from 'react-native'
 
 import Geolocation from 'Geolocation'
 import moment from 'moment'
@@ -39,8 +39,7 @@ export default class timer extends Component {
   }
   render() {
     return (
-      <View style={styles.wrap}>
-        <Image style = {styles.timeIcon} source = {require('../../icons/yyw_djs.png')} />
+      <View style={styles.wrap}><Image style={styles.timeIcon} source={require('../../icons/yyw_djs.png')}/>
         <Text style={styles.item}>{this.state.timeStr}</Text>
       </View>
     )
@@ -78,18 +77,18 @@ export default class timer extends Component {
 
   count(start, end) {
     let timeLine = (end - start) / 1000;
-  //  let day = Math.floor(timeLine / (24 * 60 * 60));
+    //  let day = Math.floor(timeLine / (24 * 60 * 60));
     let hour = Math.floor((timeLine) / (60 * 60)) > 9
-      ? Math.floor((timeLine ) / (60 * 60))
-      : "0" + Math.floor((timeLine ) / (60 * 60));
+      ? Math.floor((timeLine) / (60 * 60))
+      : "0" + Math.floor((timeLine) / (60 * 60));
     let min = Math.floor((timeLine - hour * 60 * 60) / (60)) > 9
       ? Math.floor((timeLine - hour * 60 * 60) / (60))
-      : '0' + Math.floor((timeLine  - hour * 60 * 60) / (60));
+      : '0' + Math.floor((timeLine - hour * 60 * 60) / (60));
     let sec = Math.floor(timeLine - hour * 60 * 60 - min * 60) > 9
       ? Math.floor(timeLine - hour * 60 * 60 - min * 60)
       : '0' + Math.floor(timeLine - hour * 60 * 60 - min * 60);
-      this.setState({
-        "timeStr": hour + ":" + min + ":" + sec
+    this.setState({
+      "timeStr": hour + ":" + min + ":" + sec
 
     })
 
@@ -100,29 +99,29 @@ export default class timer extends Component {
 
 const styles = StyleSheet.create({
   wrap: {
-    display:'flex',
-    backgroundColor:'rgba(250,236,229,1)',
-    width:75,
-    height:15,
+    display: 'flex',
+    backgroundColor: 'rgba(250,236,229,1)',
+    width: 75,
+    height: 15,
     borderRadius: 50,
     borderWidth: 1,
     borderColor: 'rgba(250,236,229,1)',
-    marginLeft:10,
-    marginTop:-10,
-    paddingRight:5,
+    marginLeft: 10,
+    marginTop: -10,
+    paddingRight: 5
   },
-  timeIcon:{
-    position:'absolute',
-    top:0,
-    left:0,
-    zIndex:1,
+  timeIcon: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    zIndex: 1
   },
   item: {
-    color:'#eb5e18',
-    fontSize:12,
-    position:'absolute',
-    top:0,
-    right:0,
-    zIndex:2,
+    color: '#eb5e18',
+    fontSize: 12,
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    zIndex: 2
   }
 });

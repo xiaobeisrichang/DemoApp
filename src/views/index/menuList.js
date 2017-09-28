@@ -109,7 +109,7 @@ class ChildrenItem extends Component {
             : styles.childrenImg4} source={{
             uri: feed.img
           }}/>
-          <View style = {styles.childrenTitleWrap}>
+          <View style={styles.childrenTitleWrap}>
             <Text style={index < 3
               ? styles.childrenTitle3
               : styles.childrenTitle4}>{feed.text}</Text>
@@ -137,8 +137,8 @@ const styles = StyleSheet.create({
     position: 'relative',
     borderWidth: 1,
     borderColor: 'rgba(238,238,238,1)',
-    borderTopWidth:0,
-    borderLeftWidth:0
+    borderTopWidth: 0,
+    borderLeftWidth: 0
   },
   childrenView4: {
     width: (Dimensions.get('window').width / 4),
@@ -172,20 +172,20 @@ const styles = StyleSheet.create({
     height: 30
   },
   childrenTitleWrap: {
-    width:'100%',
+    width: '100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   childrenTitle3: {
     color: '#333',
     fontSize: 14,
-    marginTop:10,
+    marginTop: 10
   },
   childrenTitle4: {
     color: '#333',
     fontSize: 12,
-    marginTop:10,
+    marginTop: 10
   }
 })

@@ -236,10 +236,9 @@ export default class hotelList extends Component {
   renderChildrenList = (feed, key) => {
     return (
       <View key={key}>
-        <View style={styles.bannerWrap}>
-          <Image source={{
-            uri: feed.titleImg
-          }} style={styles.bannerImage}/>
+        <View style={styles.bannerWrap}><Image source={{
+        uri: feed.titleImg
+      }} style={styles.bannerImage}/>
           <Text style={styles.bannerTitle1}>- {feed.title}
             -</Text>
           <Text style={styles.bannerTitle2}>{feed.smallTitle}</Text>
@@ -263,7 +262,8 @@ export default class hotelList extends Component {
       <View style={styles.listWrap}>
         <Image source={{
           uri: this.state.list.info.titleImg
-        }} style={styles.titleImage}/> {this.state.list.info.column.map(this.renderChildrenList)}
+        }} style={styles.titleImage}/>
+        {this.state.list.info.column.map(this.renderChildrenList)}
       </View>
     )
   }
@@ -279,7 +279,7 @@ class ChildrenItem extends Component {
     return (
 
       <TouchableOpacity style={styles.liBrand} activeOpacity={0.75} onPress={this.onPress}>
-        <Image style={styles.liBrand} source={{
+        <Image style={styles.liBrandImg} source={{
           uri: feed.img
         }}/>
       </TouchableOpacity>
@@ -327,7 +327,8 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor:'#fff'
   },
   liBrand: {
     width: (Dimensions.get('window').width / 4),
@@ -336,6 +337,15 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'rgba(238,238,238,1)',
     borderTopWidth: 0,
-    borderLeftWidth: 0
+    borderLeftWidth: 0,
+    display:'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  liBrandImg:{
+    width: (Dimensions.get('window').width / 4)-20,
+    height:51,
+    resizeMode:'cover'
   }
 })
