@@ -16,6 +16,7 @@ import ScrollComponent from '../index/scroll';
 import BookComponent from '../index/book';
 import MenuComponent from '../index/menuList';
 import MenuTabComponent from '../index/menuTab';
+import HotelListComponent from '../index/hotelList'
 
 
 export default class botao extends Component {
@@ -27,7 +28,8 @@ export default class botao extends Component {
         <BookComponent></BookComponent>
         <MenuComponent></MenuComponent>
         <MenuTabComponent></MenuTabComponent>
-        
+        <HotelListComponent></HotelListComponent>
+
 
       </View>
       </ScrollView>

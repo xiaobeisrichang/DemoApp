@@ -78,26 +78,20 @@ export default class timer extends Component {
 
   count(start, end) {
     let timeLine = (end - start) / 1000;
-    let day = Math.floor(timeLine / (24 * 60 * 60));
-    let hour = Math.floor((timeLine - (day * 24 * 60 * 60)) / (60 * 60)) > 9
-      ? Math.floor((timeLine - (day * 24 * 60 * 60)) / (60 * 60))
-      : "0" + Math.floor((timeLine - (day * 24 * 60 * 60)) / (60 * 60));
-    let min = Math.floor((timeLine - day * 24 * 60 * 60 - hour * 60 * 60) / (60)) > 9
-      ? Math.floor((timeLine - day * 24 * 60 * 60 - hour * 60 * 60) / (60))
-      : '0' + Math.floor((timeLine - day * 24 * 60 * 60 - hour * 60 * 60) / (60));
-    let sec = Math.floor(timeLine - day * 24 * 60 * 60 - hour * 60 * 60 - min * 60) > 9
-      ? Math.floor(timeLine - day * 24 * 60 * 60 - hour * 60 * 60 - min * 60)
-      : '0' + Math.floor(timeLine - day * 24 * 60 * 60 - hour * 60 * 60 - min * 60);
-
-    if (day > 0) {
-      this.setState({
-        "timeStr": day + "天" + hour + ":" + min + ":" + sec
-      });
-    } else {
+  //  let day = Math.floor(timeLine / (24 * 60 * 60));
+    let hour = Math.floor((timeLine) / (60 * 60)) > 9
+      ? Math.floor((timeLine ) / (60 * 60))
+      : "0" + Math.floor((timeLine ) / (60 * 60));
+    let min = Math.floor((timeLine - hour * 60 * 60) / (60)) > 9
+      ? Math.floor((timeLine - hour * 60 * 60) / (60))
+      : '0' + Math.floor((timeLine  - hour * 60 * 60) / (60));
+    let sec = Math.floor(timeLine - hour * 60 * 60 - min * 60) > 9
+      ? Math.floor(timeLine - hour * 60 * 60 - min * 60)
+      : '0' + Math.floor(timeLine - hour * 60 * 60 - min * 60);
       this.setState({
         "timeStr": hour + ":" + min + ":" + sec
-      });
-    }
+
+    })
 
   }
 }
@@ -108,13 +102,14 @@ const styles = StyleSheet.create({
   wrap: {
     display:'flex',
     backgroundColor:'rgba(250,236,229,1)',
-    width:90,
+    width:75,
     height:15,
     borderRadius: 50,
     borderWidth: 1,
     borderColor: 'rgba(250,236,229,1)',
     marginLeft:10,
-    marginTop:-10
+    marginTop:-10,
+    paddingRight:5,
   },
   timeIcon:{
     position:'absolute',
