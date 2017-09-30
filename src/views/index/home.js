@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import {AppRegistry, StyleSheet, Text, View, ScrollView} from 'react-native';
-import ScrollComponent from '../index/scroll';
-import BookComponent from '../index/book';
-import MenuComponent from '../index/menuList';
-import MenuTabComponent from '../index/menuTab';
-import HotelListComponent from '../index/hotelList'
+import ScrollComponent from './scroll';
+import BookComponent from './book';
+import MenuComponent from './menuList';
+import MenuTabComponent from './menuTab';
+import HotelListComponent from './hotelList'
+import BannerDisplayComponent from './bannerDispaly'
 
 export default class home extends Component {
   render() {
@@ -15,6 +16,7 @@ export default class home extends Component {
           <BookComponent></BookComponent>
           <MenuComponent></MenuComponent>
           <MenuTabComponent></MenuTabComponent>
+          <BannerDisplayComponent></BannerDisplayComponent>
           <HotelListComponent></HotelListComponent>
         </View>
       </ScrollView>

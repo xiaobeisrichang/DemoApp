@@ -6,14 +6,14 @@
 
 import React, {Component} from 'react';
 import {AppRegistry, StyleSheet, Text, View, ScrollView} from 'react-native';
-import MyTabBarComponent from './MyTabBar'
 import BotaoNavComponent from './navigator'
+import SimpleAppComponent from './naviDemo/HomePage'
 
 export default class botao extends Component {
   render() {
     return (
-        // <BotaoNavComponent></BotaoNavComponent>
-      <MyTabBarComponent></MyTabBarComponent> 
+         <BotaoNavComponent></BotaoNavComponent>
+      //<SimpleAppComponent></SimpleAppComponent>
     );
   }
 }

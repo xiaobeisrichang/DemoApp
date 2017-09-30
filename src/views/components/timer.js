@@ -12,7 +12,7 @@ export default class timer extends Component {
       startTime: this.props.startTime
         ? this.props.startTime
         : moment().toDate().getTime(), //如果为空，选择当前时间，为精确到毫秒的时间戳
-      endTime: 1506667519982, //this.props.endTime?this.props.endTime:1506667519982,            //为精确到毫秒的时间戳 1506667519982
+      endTime:  moment().toDate().getTime() + 86400000 ,// 1506667519982, //this.props.endTime?this.props.endTime:1506667519982,            //为精确到毫秒的时间戳 1506667519982
       formData: this.props.formData
         ? this.props.formData
         : 'H|M|S',
