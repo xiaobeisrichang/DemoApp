@@ -5,7 +5,7 @@ export default class message extends Component {
   render() {
     return (
       <View>
-        <Text>233333666</Text>
+        <Text>暂无消息记录</Text>
       </View>
     )
 
