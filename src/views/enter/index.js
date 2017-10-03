@@ -5,16 +5,22 @@
  */
 
 import React, {Component} from 'react';
-import {AppRegistry, StyleSheet, Text, View, ScrollView} from 'react-native';
-import BotaoNavComponent from './navigator'
-import SimpleAppComponent from './naviDemo/HomePage'
+import {AppRegistry, StyleSheet, Text, View, ScrollView, TouchableHighlight} from 'react-native';
+import BotaoNavComponent from './navigator';
+import SimpleAppComponent from './naviDemo/HomePage';
+
 
 export default class botao extends Component {
   render() {
+
     return (
          <BotaoNavComponent></BotaoNavComponent>
       //<SimpleAppComponent></SimpleAppComponent>
     );
+  }
+
+  _onPress = () => {
+    this.props.navigator.push(this.props.routes[this.props.route.index+1])
   }
 }
 

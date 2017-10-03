@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {AppRegistry, StyleSheet, Text, View, TouchableOpacity, Image, Button} from 'react-native';
 
 export default class walletTop extends Component {
+  //const {navigate} = this.props.navigation;
   render() {
     return (
       <View style = {styles.top}>

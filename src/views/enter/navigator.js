@@ -6,7 +6,8 @@ import {StackNavigator, TabNavigator} from 'react-navigation';
 import HomeComponent from '../index/home';
 import WalletComponent from '../wallet/wallet';
 import MessageComponent from '../message/message';
-import MyComponent from '../my/my'
+import MyComponent from '../my/my';
+//import ReChargeComponent from '../wallet/reCharge';
 
 class HomePage extends Component {
   static navigationOptions = {
@@ -179,8 +180,7 @@ const Navigator = StackNavigator({
     Home: {screen: MainScreenNavigator},
     wallet:{screen : WalletComponent},
     message :{screen : MessageComponent},
-    my : {screen : MyComponent}
-
+    my : {screen : MyComponent},
 });
 
 export default Navigator;
